@@ -1,0 +1,180 @@
+/* ================================
+   FOOTER BASE STYLING
+================================ */
+.footer {
+  background: linear-gradient(135deg, hsl(113, 94%, 51%), hsl(150, 80%, 56%));
+  color: #f8f8f8;
+  padding: 60px 8%;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow Effect */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(79, 109, 245, 0.2), transparent 70%);
+  z-index: 0;
+}
+
+/* ================================
+   FOOTER CONTAINER
+================================ */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ================================
+   BRAND SECTION
+================================ */
+.footer-brand h2 {
+  font-size: 1.7rem;
+  background: linear-gradient(90deg, #ffffff, #d4fff2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  color: #eef7f3;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+/* ================================
+   QUICK LINKS + SUPPORT LINKS
+================================ */
+.footer-links h3,
+.footer-support h3,
+.footer-payments h3,
+.footer-social h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-links ul,
+.footer-support ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul a,
+.footer-support ul a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #e6ffef;
+  transition: 0.3s;
+  position: relative;
+}
+
+.footer-links ul a::before,
+.footer-support ul a::before {
+  content: "›";
+  position: absolute;
+  left: -15px;
+  opacity: 0;
+  transition: 0.3s;
+  color: #0048ff;
+}
+
+.footer-links ul a:hover,
+.footer-support ul a:hover {
+  color: #0048ff;
+  padding-left: 10px;
+}
+
+.footer-links ul a:hover::before,
+.footer-support ul a:hover::before {
+  opacity: 1;
+}
+
+/* ================================
+   PAYMENT METHODS
+================================ */
+.footer-payments {
+  margin-top: 10px;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 32px;
+  color: #fff;
+}
+
+.payment-icons svg {
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.payment-icons svg:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
+}
+
+/* ================================
+   SOCIAL MEDIA
+================================ */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: linear-gradient(135deg, #00d4ff, #4f6df5);
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(79, 109, 245, 0.6);
+}
+
+/* ================================
+   FOOTER BOTTOM
+================================ */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #dff7e7;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-brand p {
+    margin: 0 auto;
+  }
+
+  .social-icons,
+  .payment-icons {
+    justify-content: center;
+  }
+}

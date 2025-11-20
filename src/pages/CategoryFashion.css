@@ -1,0 +1,160 @@
+.fashion-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fdf2f8 0%, #f8f9ff 100%);
+  padding: 90px 5% 140px;
+  font-family: 'Playfair Display', serif;
+}
+
+.fashion-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.fashion-header h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #2d1b3a;
+  margin: 0 0 16px;
+  letter-spacing: -1px;
+}
+
+.fashion-header p {
+  font-size: 1.4rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+.fashion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 50px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.fashion-card {
+  background: white;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+
+.fashion-image-wrapper {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+  background: #000;
+}
+
+.fashion-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.fashion-card:hover img {
+  transform: scale(1.1);
+}
+
+.quick-add-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.fashion-card:hover .quick-add-overlay {
+  opacity: 1;
+  bottom: 30px;
+}
+
+.quick-add-btn {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(233, 30, 99, 0.4);
+  transition: all 0.3s;
+}
+
+.quick-add-btn:hover {
+  transform: scale(1.08);
+  background: #c2185b;
+}
+
+.fashion-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  z-index: 2;
+  letter-spacing: 1px;
+}
+
+.fashion-badge.trending {
+  background: #ff4081;
+}
+
+.fashion-badge.bestseller {
+  background: #ffd700;
+  color: #000;
+}
+
+.fashion-badge.new {
+  background: #4caf50;
+}
+
+.fashion-info {
+  padding: 30px;
+  text-align: center;
+}
+
+.fashion-info h3 {
+  font-size: 1.4rem;
+  margin: 0 0 12px;
+  color: #333;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #e91e63;
+  margin: 12px 0;
+}
+
+.add-to-cart-btn {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 16px;
+  transition: all 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: #000;
+  transform: translateY(-3px);
+}

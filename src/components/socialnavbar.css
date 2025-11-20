@@ -1,0 +1,155 @@
+/* NAVBAR CONTAINER */
+/* RIGHT SECTION (SOCIAL ICONS + BUTTONS + CART) */
+.navbar {
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: static; /* <-- STATIC NAVBAR */
+  z-index: 9999;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.socialnavbar {
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* ensures navbar is always visible */
+}
+
+/* LOGO */
+.nav-logo h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.nav-logo span {
+  color: #ff7d29;
+}
+
+/* SEARCH BAR */
+.nav-search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 20px;
+}
+
+.nav-search input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #ddd;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.nav-search button {
+  padding: 10px 20px;
+  background: #ff7d29;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.nav-search button:hover {
+  background: #ff924f;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  color: #444;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff7d29;
+  transform: scale(1.2);
+}
+
+/* AUTH BUTTONS */
+.signin-btn,
+.signup-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  margin-right: 12px;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.signin-btn {
+  background: transparent;
+  border: 1.8px solid #ff7d29;
+  color: #ff7d29;
+}
+
+.signin-btn:hover {
+  background: #ffe7d3;
+}
+
+.signup-btn {
+  background: #ff7d29;
+  color: white;
+}
+
+.signup-btn:hover {
+  background: #ff924f;
+}
+
+/* CART ICON */
+.cart-icon {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #222;
+  transition: 0.3s;
+}
+
+.cart-icon:hover {
+  color: #ff7d29;
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .nav-search {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .signup-btn,
+  .signin-btn {
+    display: none;
+  }
+}

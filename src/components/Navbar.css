@@ -1,0 +1,212 @@
+/* ------------------------------- */
+/* NAVBAR MAIN CONTAINER */
+/* ------------------------------- */
+.navbar {
+  width: 100%;
+  background: #2691e9;
+  color: white;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.nav-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ------------------------------- */
+/* LOGO */
+/* ------------------------------- */
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+/* ------------------------------- */
+/* SEARCH BAR */
+/* ------------------------------- */
+.search-bar input {
+  padding: 8px 14px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #444;
+  width: 250px;
+  background: #ccf514;
+  color: white;
+  transition: 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #ff9800;
+}
+
+/* ------------------------------- */
+/* NAV LINKS (DESKTOP) */
+/* ------------------------------- */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links li {
+  list-style: none;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9800;
+}
+
+/* ------------------------------- */
+/* DROPDOWN MENU */
+/* ------------------------------- */
+.dropdown .drop-btn {
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.dropdown:hover .drop-btn {
+  color: #ff9800;
+}
+
+/* DROPDOWN CONTENT */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #1c1c1c;
+  top: 35px;
+  left: 0;
+  min-width: 180px;
+  border-radius: 8px;
+  padding: 10px 0;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.4);
+  z-index: 300;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  color: #ff9800;
+  padding-left: 5px;
+}
+
+/* ------------------------------- */
+/* ICONS: WISHLIST, ACCOUNT, CART */
+/* ------------------------------- */
+.wishlist a,
+.account a,
+.cart a {
+  color: white;
+  font-size: 22px;
+  margin-left: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.wishlist a:hover,
+.account a:hover,
+.cart a:hover {
+  color: #ff9800;
+}
+
+/* CART BADGE */
+.cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background: red;
+  padding: 3px 7px;
+  font-size: 12px;
+  border-radius: 50%;
+  color: white;
+}
+
+/* ------------------------------- */
+/* HAMBURGER MENU (MOBILE) */
+/* ------------------------------- */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* ------------------------------- */
+/* MOBILE MENU */
+/* ------------------------------- */
+.mobile-links {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav-links,
+  .search-bar,
+  .wishlist,
+  .account,
+  .cart {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-links {
+    display: block;
+    background: #1b1b1b;
+    padding: 15px 25px;
+  }
+
+  .mobile-links li {
+    list-style: none;
+    padding: 12px 0;
+  }
+
+  .mobile-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+  }
+
+  .mobile-links a:hover {
+    color: #ff9800;
+  }
+}
+.logo-img {
+  height: 50px; /* Adjust the size */
+  cursor: pointer;
+}
+

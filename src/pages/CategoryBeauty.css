@@ -1,0 +1,152 @@
+.beauty-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff1fb 0%, #f8f5ff 100%);
+  padding: 120px 5% 160px;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  z-index: 1; /* Fixes dropdown click issue */
+}
+
+.beauty-header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.beauty-header h1 {
+  font-size: 5.5rem;
+  font-weight: 900;
+  background: linear-gradient(to right, #ff6bd6, #9c27b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 20px;
+  letter-spacing: -2px;
+}
+
+.beauty-header p {
+  font-size: 1.5rem;
+  color: #777;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.beauty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 60px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.beauty-card {
+  background: white;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(255, 105, 180, 0.15);
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  background: linear-gradient(45deg, #ffeef8, #f8f0ff);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.beauty-card:hover img {
+  transform: scale(1.15);
+}
+
+.quick-add {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.quick-add button {
+  background: #ff1493;
+  color: white;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 15px 40px rgba(255, 20, 147, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.beauty-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  z-index: 10;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.beauty-badge.bestseller { background: #ffd700; color: #000; }
+.beauty-badge.hot       { background: #ff3b30; color: white; }
+.beauty-badge.new       { background: #00ff9d; color: #000; }
+.beauty-badge.limited   { background: #9c27b0; color: white; }
+
+.beauty-info {
+  padding: 36px;
+  text-align: center;
+}
+
+.beauty-info h3 {
+  font-size: 1.6rem;
+  margin: 0 0 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #d63384;
+  margin: 16px 0;
+}
+
+.add-to-cart-btn {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: all 0.4s;
+}
+
+.add-to-cart-btn:hover {
+  background: #000;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .beauty-header h1 { font-size: 3.8rem; }
+  .beauty-grid { gap: 40px; }
+  .image-container { height: 420px; }
+}
